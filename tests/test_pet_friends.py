@@ -48,7 +48,7 @@ def test_post_create_pet_with_valid_data(name='Тигренок', animal_type='�
     assert result["pet_photo"] != ""
 
 
-def test_put_update_pet_info_for_valid_data(name="Тигр", animal_type='Кот', age=7):
+def test_put_update_pet_info_with_valid_data(name="Тигр", animal_type='Кот', age=7):
     """Проверяем, что обновление информации о питомце работает"""
 
     # Запрашиваем ключ auth_key и получаем список своих питомцев
@@ -93,7 +93,7 @@ def test_successful_delete_pet_by_id():
     assert pet_id not in my_pets.values()
 
 
-def test_post_create_pet_simple_for_valid_data(name='Цейс', animal_type='Собака', age=1):
+def test_post_create_pet_simple_with_valid_data(name='Цейс', animal_type='Собака', age=1):
     """Проверяем, что можно добавить питомца без фото с валидными данными"""
 
     # Запрашиваем ключ auth_key и сохраняем в переменную auth_key
