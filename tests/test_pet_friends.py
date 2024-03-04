@@ -78,7 +78,7 @@ def test_successful_delete_pet_by_id():
 
     # Если список пустой, то создаем нового питомца и запрашиваем список своих питомцев
     if 0 == len(my_pets['pets']):
-        pf.post_create_pet(auth_key, "Рысь", "Кошка", 10)
+        pf.post_create_pet_simple(auth_key, "Рысь", "Кошка", 10)
         _, my_pets = pf.get_list_of_pets(auth_key, 'my_pets')
 
     # Берем ID первого питомца из списка и отправляем запрос на удаление
